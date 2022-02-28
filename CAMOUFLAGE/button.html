@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CAMOUFLAGE-BUTTON</title>
+</head>
+<style>
+    /* 拟态阴影 https://neumorphism.io/#55b9f3 */
+    /* Button css https://cssbuttons.io/ */
+
+    :root {
+        /* 定义变量 */
+        --white: #FFFFFF;
+        --background: #E4EBF5;
+        --color-2: #c8d0e7;
+        --color-3: #9baacf;
+        --color-4: #636ffe;
+        --box-shadow: inset 0.2rem 0.2rem 0.5rem var(--color-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+        --active-shadow: 0.3rem 0.3rem 0.6rem var(--color-2), -0.2rem -0.2rem 0.5rem var(--white);
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        overflow: hidden;
+        background: var(--background);
+    }
+
+    div {
+        margin: auto;
+    }
+
+    button {
+        height: 40px;
+        width: 150px;
+        margin-right: 10px;
+        font-weight: 800;
+        line-height: 40px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .purple-btn {
+        color: var(--background);
+        background: #636ffe;
+        box-shadow: inset 8px 8px 14px #5863e2,
+        inset -8px -8px 14px #6e7bff;
+    }
+
+    .purple-btn:active {
+        color: var(--white);
+    }
+
+    .white-btn {
+        color: var(--color-3);
+        box-shadow: var(--box-shadow);
+    }
+
+    .white-btn:active {
+        box-shadow: var(--active-shadow);
+    }
+
+
+</style>
+<body>
+<div>
+    <div class="btn-wrapper">
+        <button class="purple-btn">Button</button>
+        <button class="white-btn">Button</button>
+    </div>
+</div>
+</body>
+</html>
