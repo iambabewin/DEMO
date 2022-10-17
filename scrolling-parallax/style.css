@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #0a2a43;
+    min-height: 1500px;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 10000;
+}
+section:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a2a43;
+    z-index: 10000;
+    mix-blend-mode: color;/*设置图片元素与父容器背景（黄色）进行混合，图片会变暗*/
+}
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*对图片进行剪切，保留原始比例*/
+    pointer-events: none;/*设置元素是否对鼠标事件做出反应*/
+}
+#text {
+    position: relative;
+    color: #ffffff;
+    font-size: 10em;
+    z-index: 1;
+}
+#road {
+    z-index: 2;
+}
