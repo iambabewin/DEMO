@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Parallax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background"><span>Mountain</span></div>
+<h2>
+    This is a paragraph.This is a paragraph.
+    This is a paragraph.This is a paragraph.
+    This is a paragraph.This is a paragraph.
+</h2>
+<script>
+    const background = document.querySelector(".background")
+    document.addEventListener('scroll', () => {
+        const scrollY = window.scrollY
+        if (scrollY !== 0) {
+            background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`
+        } else{
+            background.style.backgroundPosition = ''
+        }
+    })
+</script>
+</body>
+</html>
